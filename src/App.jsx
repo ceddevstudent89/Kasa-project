@@ -5,6 +5,8 @@ import About from "./pages/About.jsx";
 
 import Footer from "./components/Footer.jsx";
 import Navbar from "./components/Navbar.jsx";
+import CardDetail from "./components/CardDetail.jsx";
+import PageNotFound from "./components/PageNotFound.jsx";
 
 export default function App() {
   return (
@@ -14,6 +16,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/cards/:id" element={<CardDetail />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />
       </BrowserRouter>

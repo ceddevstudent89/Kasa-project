@@ -37,3 +37,50 @@ nav > a {
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
+
+.cards-list {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 50px 60px;
+  justify-content: center;
+}
+
+.cards-tile {
+  min-width: 340px;
+  min-height: 340px;
+  border-radius: 10px;
+  color: #fff;
+  position: relative;
+}
+
+.cards-tile a {
+  font-family: inherit;
+  /* color: #000; */
+  text-decoration: none;
+}
+
+.cards-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.cards-tile h3 {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+  padding: 20px;
+  text-align: start;
+  color: #fff;
+  font-family: inherit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
