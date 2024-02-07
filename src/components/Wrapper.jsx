@@ -7,6 +7,7 @@ const WrapperContainer = styled.div`
   height: auto;
   border-radius: 25px;
   margin-top: 43px;
+  margin-bottom: 43px;
 
   @media screen and (max-width: 1440px) {
     padding: 0;

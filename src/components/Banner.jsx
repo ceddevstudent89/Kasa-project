@@ -32,7 +32,12 @@ const BannerTitle = styled.h1`
   letter-spacing: 1px;
 `;
 
-export default function Banner({ backgroundImage, className, title }) {
+export default function Banner({
+  backgroundImage,
+  className,
+  title,
+  children,
+}) {
   return (
     <BannerDiv>
       <BannerContainer $backgroundImage={backgroundImage}>
@@ -40,6 +45,7 @@ export default function Banner({ backgroundImage, className, title }) {
           <BannerTitle>{title}</BannerTitle>
         </div>
       </BannerContainer>
+      {children}
     </BannerDiv>
   );
 }

@@ -9,7 +9,6 @@ const FooterContent = styled.footer`
   align-items: center;
   flex-direction: column;
   gap: 20px;
-  margin-top: 50px;
 `;
 
 const FooterImg = styled.img`

@@ -33,15 +33,10 @@ nav > a {
 .container-app {
   max-width: 1440px;
   margin: 0 auto;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  min-height: calc(var(--vh, 1vh) * 100);
   display: grid;
   grid-template-rows: auto 1fr auto;
-}
-
-@media screen and (max-width: 844px) {
-  .container-app {
-    height: 1060px;
-  }
 }
 
 .cards-tile {
