@@ -6,7 +6,7 @@ import About from "./pages/About.jsx";
 import Footer from "./components/Footer.jsx";
 import Navbar from "./components/Navbar.jsx";
 import CardDetail from "./components/CardDetail.jsx";
-import PageNotFound from "./components/PageNotFound.jsx";
+import PageNotFound from "./pages/PageNotFound.jsx";
 
 export default function App() {
   return (

@@ -38,6 +38,12 @@ nav > a {
   grid-template-rows: auto 1fr auto;
 }
 
+@media screen and (max-width: 844px) {
+  .container-app {
+    height: 1060px;
+  }
+}
+
 .cards-list {
   margin: 0 auto;
   display: grid;
