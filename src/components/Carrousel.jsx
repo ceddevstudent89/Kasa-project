@@ -105,17 +105,22 @@ export default function Carrousel({ cardId }) {
     <Carousel>
       <CarouselContainer>
         <CarouselImg src={pictures[index]} alt="Carousel image" />
-        <CarouselNumber>
-          {index + 1} / {pictures.length}
-        </CarouselNumber>
-        <CarouselControls>
-          <CarouselButtons onClick={prevImage}>
-            <CarouselIcons src={arrowLeft} alt="arrow left icon" />
-          </CarouselButtons>
-          <CarouselButtons onClick={nextImage}>
-            <CarouselIcons src={arrowRight} alt="arrow right icon" />
-          </CarouselButtons>
-        </CarouselControls>
+        {/* Condition pour ne pas afficher 1/1 */}
+        {pictures.length > 1 && (
+          <>
+            <CarouselNumber>
+              {index + 1} / {pictures.length}
+            </CarouselNumber>
+            <CarouselControls>
+              <CarouselButtons onClick={prevImage}>
+                <CarouselIcons src={arrowLeft} alt="arrow left icon" />
+              </CarouselButtons>
+              <CarouselButtons onClick={nextImage}>
+                <CarouselIcons src={arrowRight} alt="arrow right icon" />
+              </CarouselButtons>
+            </CarouselControls>
+          </>
+        )}
       </CarouselContainer>
     </Carousel>
   );
