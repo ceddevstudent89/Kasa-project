@@ -105,7 +105,7 @@ export default function Carrousel({ cardId }) {
     <Carousel>
       <CarouselContainer>
         <CarouselImg src={pictures[index]} alt="Carousel image" />
-        {/* Condition pour ne pas afficher 1/1 */}
+        {/* Condition pour ne pas afficher 1/1 et les icones*/}
         {pictures.length > 1 && (
           <>
             <CarouselNumber>

@@ -7,28 +7,27 @@ export default function About() {
       <Banner backgroundImage="../src/assets/mountain.png"></Banner>
       <div style={{ marginTop: "40px" }}>
         <Collapse title={"Fiabilité"}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          Les annonces postées sur Kasa garantissent une Fiabilité totale. Les
+          photos sont conformes aux logements, et toutes les informations sont
+          régulièrement vérifiées pas nos équipes.
         </Collapse>
         <Collapse title={"Respect"}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
+          comportement discriminatoire ou de pertubation du voisinage entraînera
+          une exclusion de notre plateforme.
         </Collapse>
         <Collapse title={"Service"}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
+          comportement discriminatoire ou de pertubation du voisinage entraînera
+          une exclusion de notre plateforme.
         </Collapse>
         <Collapse title={"Sécurité"}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que
+          pour les voyageurs, chaque logement correspond aux critères de
+          sécurité établis par nos services. En laissant une note aussi bien à
+          l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les
+          standards sont bien respectés. Nous organisons également des ateliers
+          sur la sécurité domestique pour nos hôtes.
         </Collapse>
       </div>
     </div>
