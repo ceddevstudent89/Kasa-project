@@ -22,8 +22,7 @@ const CollapseVisible = styled.button`
   justify-content: space-between;
   align-items: center;
   padding: 0px 15px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-radius: 5px;
 `;
 
 const CollapseTitle = styled.span`
