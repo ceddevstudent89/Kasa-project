@@ -47,7 +47,7 @@ nav > a {
   position: relative;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 360px) {
   .cards-tile {
     min-width: 280px;
     min-height: 280px;

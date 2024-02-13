@@ -10,6 +10,10 @@ const StyleCollapseContainer = styled.div`
   max-width: 1300px;
   width: 100%;
   margin: 20px auto;
+
+  @media (max-width: 768px) {
+    margin: 5px auto;
+  }
 `;
 
 const StyleCollapseHeader = styled.div`
@@ -35,9 +39,14 @@ const StyleCollapseHeader = styled.div`
 `;
 
 const StyledCollapseTitle = styled.h2`
+  font-size: 18px;
   font-family: Montserrat;
-  font-weight: 400;
+  font-weight: 700;
   margin: 0;
+
+  @media (max-width: 375px) {
+    font-size: 13px;
+  }
 `;
 
 const StyledCollapseContent = styled.div`
@@ -58,6 +67,10 @@ const StyledCollapseLi = styled.li`
   font-weight: 400;
   color: #d9534f;
   margin-bottom: 5px;
+
+  @media (max-width: 390px) {
+    font-size: 13px;
+  }
 `;
 
 export default function Collapse(props) {

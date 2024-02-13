@@ -22,14 +22,26 @@ const BannerContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 375px) {
+    min-height: 111px;
+  }
 `;
 
 const BannerTitle = styled.h1`
   font-family: inherit;
   color: #fff;
-  font-weight: 500;
+  font-weight: 700;
   font-size: clamp(24px, 4vw, 48px);
   letter-spacing: 1px;
+
+  @media (max-width: 375px) {
+    margin-right: 39px;
+  }
+  @media (max-width: 360px) {
+    border: 1px solid red;
+    margin-right: 0px;
+  }
 `;
 
 export default function Banner({

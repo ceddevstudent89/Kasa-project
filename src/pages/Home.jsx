@@ -12,7 +12,7 @@ const CardsList = styled.div`
   gap: 50px 60px;
   justify-content: center;
 
-  @media (max-width: 320px) {
+  @media (max-width: 360px) {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   }
 `;
