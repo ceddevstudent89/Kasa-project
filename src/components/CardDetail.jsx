@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import Carrousel from "./Carrousel";
 
 import datas from "../data/data.json";
@@ -130,6 +130,14 @@ export default function CardDetail() {
   const dataCurrentCardDetail = datas.filter(
     (data) => data.id === idCardDetail
   );
+
+  /* je redirige l'utilisateur vers la page d'erreur 404 
+  si l'id n'existe pas dans le tableau de data.json() */
+  if (dataCurrentCardDetail.length === 0) {
+    /* redirection page 404 to="*" Navigate est un composant qui
+  permet de changer l'emplacement actuel lorsqu'il est rendu */
+    return <Navigate to="*" />;
+  }
 
   const name = dataCurrentCardDetail[0].host.name.split(" ");
   console.log(name);
