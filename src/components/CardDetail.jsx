@@ -8,6 +8,7 @@ import redStar from "../assets/red_star.png";
 
 import styled from "styled-components";
 import Footer from "../components/Footer";
+import Collapse from "./Collapse";
 
 const CardContainer = styled.section`
   display: flex;
@@ -122,6 +123,20 @@ const StarsRating = styled.div`
   }
 `;
 
+const CollapseDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+  @media (max-width: 1440px) {
+    padding: 0 20px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
 export default function CardDetail() {
   const params = useParams();
   console.log(params.id);
@@ -195,17 +210,16 @@ export default function CardDetail() {
         </CardContent>
       </CardContainer>
 
-      <div
-        style={{
-          color: "#fff",
-          background: "#ff6060",
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-        }}
-      >
-        <div>Here is a collapsed component</div>
-        <div>Here is a collapsed component</div>
-      </div>
+      <CollapseDiv>
+        <Collapse title={"Description"}>{description}</Collapse>
+        <Collapse title={"Équipements"}>
+          <ul>
+            {equipments.map((equipment, index) => (
+              <li key={`${index}-${equipment}`}>{equipment}</li>
+            ))}
+          </ul>
+        </Collapse>
+      </CollapseDiv>
       <Footer />
     </div>
   );

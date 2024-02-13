@@ -1,115 +1,88 @@
-import React, { useState, useEffect, useRef } from "react";
-import "../index.css";
-import chevron from "../assets/chevron.png";
-
 import styled from "styled-components";
+import { useState } from "react";
 
-const CollapseContainer = styled.div`
-  max-width: 80%;
-  margin: 0 auto;
-  border-radius: 5px;
-  background: #f6f6f6;
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+
+// Composant collapse
+const StyleCollapseContainer = styled.div`
+  margin-bottom: 20px;
+  max-width: 1300px;
+  width: 100%;
+  margin: 20px auto;
 `;
 
-const CollapseVisible = styled.button`
-  margin-top: 20px;
-  background: #ff6060;
-  width: 100%;
+const StyleCollapseHeader = styled.div`
+  border-radius: 5px;
+  background-color: #ff6060;
   color: #fff;
   cursor: pointer;
-  border: 1px solid #ff6060;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 15px;
-  border-radius: 5px;
-`;
+  padding: 10px;
 
-const CollapseTitle = styled.span`
-  font-family: inherit;
-  font-size: 24px;
-  font-weight: 700;
-  padding: 10px 0;
-`;
-
-const CollapseImg = styled.img`
-  width: 20px;
-  transform: rotate(180deg);
-  transition: transform 0.3s ease-in-out;
-
-  &.active {
+  .chevron-icon {
+    font-size: 1.5em;
+    color: #fff;
+    transition: transform 0.3s ease-in-out;
     transform: rotate(0deg);
   }
-`;
 
-const CollapseToggle = styled.div`
-  height: 0px;
-  font-size: 18px;
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: opacity 0.3s ease-in-out, transform 0.3s 0.3s ease-in-out,
-    height 0.3s 0.3s ease-in-out;
-  color: #000;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-
-  &.animated {
-    opacity: 1;
-    transform: translateY(0px);
-    transition: height 0.3s ease-in-out, transform 0.3s 0.25s ease-in-out,
-      opacity 0.3s 0.3s ease-in-out;
+  .chevron-icon.down {
+    transform: rotate(180deg);
   }
 `;
 
-const CollapseText = styled.p`
-  font-size: 22px;
+const StyledCollapseTitle = styled.h2`
+  font-family: Montserrat;
   font-weight: 400;
   margin: 0;
-  padding: 22px 15px;
-  pointer-events: none;
-  line-height: 1.3;
-  @media screen and (max-width: 940px) {
-    .collapse-toggle p {
-      font-size: 18px;
-    }
 `;
 
-export default function collapse({ title, children }) {
-  const [toggle, setToggle] = useState(false);
-  const [heightEl, setHeightEl] = useState();
+const StyledCollapseContent = styled.div`
+  background-color: #f3f3f3;
+  padding: 10px;
+`;
 
-  const refHeight = useRef();
+const StyledCollapseUl = styled.ul`
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  overflow: hidden;
+`;
 
-  /* useEffect est utilisé ici pour mesurer la hauteur de l’élément de la collapse
-  après le rendu, afin de pouvoir animer sa hauteur plus tard lorsque
-  la collapse est ouvert ou fermé. */
+const StyledCollapseLi = styled.li`
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 400;
+  color: #d9534f;
+  margin-bottom: 5px;
+  // idée d'animation :
+  // transform: translateY(${(props) => (props.open ? "0px" : "-20px")});
+  // opacity: ${(props) => (props.open ? "1" : "0")};
+  // transition: all 0.3s ease-out;
+`;
 
-  useEffect(() => {
-    // console.log(refHeight);
-    setHeightEl(`${refHeight.current.scrollHeight}px`);
-  }, []);
+export default function Collapse(props) {
+  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleState = () => {
-    setToggle(!toggle);
-  };
-
-  // console.log(toggle);
   return (
-    <CollapseContainer>
-      <CollapseVisible onClick={toggleState}>
-        <CollapseTitle>{title}</CollapseTitle>
-        <CollapseImg className={toggle ? "active" : undefined} src={chevron} />
-      </CollapseVisible>
-
-      <CollapseToggle
-        className={toggle ? "collapse-toggle animated" : "collapse-toggle"}
-        style={{ height: toggle ? `${heightEl}` : "0px" }}
-        ref={refHeight}
-      >
-        <CollapseText aria-hidden={toggle ? "true" : "false"}>
-          {children}
-        </CollapseText>
-      </CollapseToggle>
-    </CollapseContainer>
+    <StyleCollapseContainer>
+      <StyleCollapseHeader onClick={() => setIsOpen(!isOpen)}>
+        <StyledCollapseTitle>{props.title}</StyledCollapseTitle>
+        <FontAwesomeIcon
+          icon={faChevronDown}
+          className={`chevron-icon ${isOpen ? "up" : "down"}`}
+        />
+      </StyleCollapseHeader>
+      {isOpen && (
+        <StyledCollapseContent className="collapse-content">
+          <StyledCollapseUl>
+            <StyledCollapseLi open={isOpen}>{props.children}</StyledCollapseLi>
+          </StyledCollapseUl>
+        </StyledCollapseContent>
+      )}
+    </StyleCollapseContainer>
   );
 }
