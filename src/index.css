@@ -47,6 +47,13 @@ nav > a {
   position: relative;
 }
 
+@media (max-width: 320px) {
+  .cards-tile {
+    min-width: 280px;
+    min-height: 280px;
+  }
+}
+
 .cards-tile a {
   font-family: inherit;
   text-decoration: none;

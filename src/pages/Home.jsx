@@ -11,6 +11,10 @@ const CardsList = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: 50px 60px;
   justify-content: center;
+
+  @media (max-width: 320px) {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
 `;
 
 export default function Home() {
