@@ -58,10 +58,6 @@ const StyledCollapseLi = styled.li`
   font-weight: 400;
   color: #d9534f;
   margin-bottom: 5px;
-  // idée d'animation :
-  // transform: translateY(${(props) => (props.open ? "0px" : "-20px")});
-  // opacity: ${(props) => (props.open ? "1" : "0")};
-  // transition: all 0.3s ease-out;
 `;
 
 export default function Collapse(props) {
@@ -77,9 +73,9 @@ export default function Collapse(props) {
         />
       </StyleCollapseHeader>
       {isOpen && (
-        <StyledCollapseContent className="collapse-content">
+        <StyledCollapseContent open={isOpen} className="collapse-content">
           <StyledCollapseUl>
-            <StyledCollapseLi open={isOpen}>{props.children}</StyledCollapseLi>
+            <StyledCollapseLi>{props.children}</StyledCollapseLi>
           </StyledCollapseUl>
         </StyledCollapseContent>
       )}
