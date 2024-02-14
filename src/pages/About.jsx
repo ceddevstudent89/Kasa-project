@@ -3,16 +3,12 @@ import Collapse from "../components/Collapse";
 import Footer from "../components/Footer";
 import styled from "styled-components";
 
-const CollapsesContent = styled.div`
-  margin: "20px 0";
-`;
-
 export default function About() {
   return (
     <>
       <div>
         <Banner backgroundImage="../src/assets/mountain.png">
-          <CollapsesContent>
+          <div style={{ height: "100%" }}>
             <Collapse title={"Fiabilité"}>
               Les annonces postées sur Kasa garantissent une Fiabilité totale.
               Les photos sont conformes aux logements, et toutes les
@@ -36,7 +32,7 @@ export default function About() {
               que les standards sont bien respectés. Nous organisons également
               des ateliers sur la sécurité domestique pour nos hôtes.
             </Collapse>
-          </CollapsesContent>
+          </div>
         </Banner>
       </div>
       <Footer />
