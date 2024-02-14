@@ -15,15 +15,16 @@ const BannerContainer = styled.div`
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  min-height: 223px;
+  min-height: 293px;
   color: white;
   padding: 45px 23px;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 
-  @media (max-width: 375px) {
+  @media (max-width: 779px) {
     min-height: 111px;
   }
 `;
@@ -39,7 +40,6 @@ const BannerTitle = styled.h1`
     margin-right: 39px;
   }
   @media (max-width: 360px) {
-    border: 1px solid red;
     margin-right: 0px;
   }
 `;

@@ -6,13 +6,12 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 // Composant collapse
 const StyleCollapseContainer = styled.div`
-  margin-bottom: 20px;
+  margin: 10px auto 20px;
   max-width: 1300px;
-  width: 100%;
-  margin: 20px auto;
-
+  width: 80%;
   @media (max-width: 768px) {
-    margin: 5px auto;
+    width: 100%;
+    margin: 0px 0px 20px;
   }
 `;
 

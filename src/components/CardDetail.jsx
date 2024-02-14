@@ -11,6 +11,7 @@ import Footer from "../components/Footer";
 import Collapse from "./Collapse";
 
 const CardContainer = styled.section`
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,7 +83,7 @@ const CardContent = styled.div`
     flex-direction: row-reverse;
     justify-content: space-between;
     width: 100%;
-    margin-top: 10px;
+    margin-bottom: 10px;
   }
 `;
 
@@ -168,7 +169,7 @@ export default function CardDetail() {
       style={{
         display: "grid",
         gridTemplateRows: "auto auto 1fr auto",
-        gap: "20px",
+        gap: "0px",
       }}
     >
       <Carrousel cardId={params.id} />
