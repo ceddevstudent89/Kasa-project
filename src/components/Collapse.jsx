@@ -1,8 +1,14 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+
+// Animation d'opacité
+const fadeIn = keyframes`
+  0% { opacity: 0; transform: translateY(-20px);}
+  100% { opacity: 1; transform: translateY(0);}
+`;
 
 // Composant collapse
 const StyleCollapseContainer = styled.div`
@@ -66,6 +72,8 @@ const StyledCollapseLi = styled.li`
   font-weight: 400;
   color: #d9534f;
   margin-bottom: 5px;
+  opacity: 0;
+  animation: ${fadeIn} 0.3s ease-in-out forwards;
 
   @media (max-width: 390px) {
     font-size: 13px;

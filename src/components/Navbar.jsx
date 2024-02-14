@@ -32,6 +32,9 @@ const HeaderContent = styled.header`
   @media (max-width: 768px) {
     margin: 0;
   }
+  @media (max-width: 390px) {
+    height: 80px;
+  }
 `;
 
 const StyledLink = styled(Link)`
