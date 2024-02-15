@@ -77,7 +77,7 @@ export default function Navbar() {
           className={({ isActive }) => `${isActive && "activeLink"}`}
           to="/"
         >
-          Home
+          Accueil
         </NavLink>
         <NavLink
           className={({ isActive }) => `${isActive && "activeLink"}`}
