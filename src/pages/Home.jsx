@@ -3,7 +3,6 @@ import Wrapper from "../components/Wrapper";
 import { Link } from "react-router-dom";
 import data from "../data/data.json";
 import styled from "styled-components";
-import Footer from "../components/Footer";
 
 const CardsList = styled.div`
   margin: 0 auto;
@@ -35,7 +34,6 @@ export default function Home() {
       <Wrapper>
         <CardsList>{dataElements}</CardsList>
       </Wrapper>
-      <Footer />
     </div>
   );
 }

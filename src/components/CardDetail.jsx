@@ -7,7 +7,6 @@ import greyStar from "../assets/grey_star.png";
 import redStar from "../assets/red_star.png";
 
 import styled from "styled-components";
-import Footer from "../components/Footer";
 import Collapse from "./Collapse";
 
 const CardContainer = styled.section`
@@ -221,7 +220,6 @@ export default function CardDetail() {
           </ul>
         </Collapse>
       </CollapseDiv>
-      <Footer />
     </div>
   );
 }

@@ -29,7 +29,7 @@ const BannerContainer = styled.div`
   }
 `;
 
-const BannerTitle = styled.h1`
+const BannerTitle = styled.h2`
   font-family: inherit;
   color: #fff;
   font-weight: 700;

@@ -37,7 +37,7 @@ const HeaderContent = styled.header`
   }
 `;
 
-const StyledLink = styled(Link)`
+const StyledTitle = styled.h1`
   margin-right: auto;
   height: 68px;
   width: 210.32px;
@@ -68,9 +68,10 @@ const StyledNav = styled.nav`
 export default function Navbar() {
   return (
     <HeaderContent>
-      <StyledLink to="/" className="site-logo">
+      <StyledTitle className="site-logo">
         <StyledImg src={logo} alt="Logo Kasa" />
-      </StyledLink>
+      </StyledTitle>
+
       <StyledNav>
         <NavLink
           className={({ isActive }) => `${isActive && "activeLink"}`}

@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import "../index.css";
-import Footer from "../components/Footer";
 
 const ErrorContent = styled.section`
   padding-top: 70px;
@@ -35,17 +34,14 @@ export default function PageNotFound() {
   return (
     <>
       <div>
-        <main>
-          <ErrorContent>
-            <ErrorStatus>404</ErrorStatus>
-            <ErrorMessage>
-              Oups, La page que vous demandez n'existe pas.
-            </ErrorMessage>
-            <ErrorLink to="/">Retourner sur la page d'accueil</ErrorLink>
-          </ErrorContent>
-        </main>
+        <ErrorContent>
+          <ErrorStatus>404</ErrorStatus>
+          <ErrorMessage>
+            Oups, La page que vous demandez n'existe pas.
+          </ErrorMessage>
+          <ErrorLink to="/">Retourner sur la page d'accueil</ErrorLink>
+        </ErrorContent>
       </div>
-      <Footer />
     </>
   );
 }

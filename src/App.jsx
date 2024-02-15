@@ -7,6 +7,7 @@ import About from "./pages/About.jsx";
 import Navbar from "./components/Navbar.jsx";
 import CardDetail from "./components/CardDetail.jsx";
 import PageNotFound from "./pages/PageNotFound.jsx";
+import Footer from "./components/Footer.jsx";
 
 export default function App() {
   useEffect(() => {
@@ -31,13 +32,16 @@ export default function App() {
     <div className="container-app">
       <BrowserRouter>
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/cards/:id" element={<CardDetail />} />
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/cards/:id" element={<CardDetail />} />
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
+        </main>
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import Banner from "../components/Banner";
 import Collapse from "../components/Collapse";
-import Footer from "../components/Footer";
 import styled from "styled-components";
 
 export default function About() {
@@ -35,7 +34,6 @@ export default function About() {
           </div>
         </Banner>
       </div>
-      <Footer />
     </>
   );
 }
